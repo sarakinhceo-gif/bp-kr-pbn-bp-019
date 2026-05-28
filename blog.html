@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    
+    <!-- SEO 메타데이터 -->
+    <title>블로그 | 창원 SEO 마케팅 전문</title>
+    <meta name="description" content="왜 당신의 사이트는 2 페이지에 처박혀 있는가? 창원 SEO 마케팅의 진실. 알고리즘 조작이 아닌, 검색엔진 권위 도메인(PBN)을 이용한 지배 전략을 공개합니다.">
+    <meta name="keywords" content="창원 SEO 마케팅 전문, 창원 백링크, PBN 전략, 검색 엔진 권위 도메인, 구글 상위 노출, SEO 직접 대응, 창원 디지털 마케팅">
+    <link rel="canonical" href="https://kr-pbn-bp-019.pages.dev/blog">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="블로그 | 창원 SEO 마케팅 전문">
+    <meta property="og:description" content="창원에서 구글 1 페이지를 장악하는 유일한 방법. 허세 부리는 대행사는 사절합니다.">
+    <meta property="og:url" content="https://kr-pbn-bp-019.pages.dev/blog">
+    <meta property="og:image" content="https://kr-pbn-bp-019.pages.dev/assets/og-image.jpg">
+
+    <style>
+        /* RESET & BASE */
+        :root {
+            --color-bg: #0a0a0a;
+            --color-text: #f0f0f0;
+            --color-acid: #ccff00;
+            --color-accent: #ff003c;
+            --font-main: 'Courier New', Courier, monospace;
+            --font-display: 'Arial Black', sans-serif;
+            --spacing-unit: 1rem;
+            --border-width: 2px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        img, svg { max-width: 100%; display: block; }
+        
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: -1px; line-height: 1.1; }
+        h1 { font-size: clamp(2.5rem, 8vw, 6rem); color: var(--color-acid); margin-bottom: 1rem; }
+        h2 { font-size: clamp(1.8rem, 5vw, 3.5rem); border-bottom: var(--border-width) solid var(--color-acid); padding-bottom: 0.5rem; margin-bottom: 2rem; }
+        h3 { font-size: 1.5rem; color: var(--color-acid); margin-bottom: 0.5rem; }
+        p { font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 80ch; }
+
+        /* UTILITIES */
+        .bg-primary { background-color: var(--color-bg); }
+        .bg-acid { background-color: var(--color-acid); color: var(--color-bg); }
+        .text-acid { color: var(--color-acid); }
+        .text-accent { color: var(--color-accent); }
+        .border-solid { border: var(--border-width) solid var(--color-text); }
+        .border-acid { border: var(--border-width) solid var(--color-acid); }
+        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        
+        @media (min-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr 1fr; }
+            .nav-present { display: flex !important; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: var(--border-width) solid var(--color-text); }
+        }
+        
+        .hidden-mobile { display: none; }
+        @media (min-width: 768px) { .hidden-mobile { display: block; } }
+
+        /* COMPONENTS */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--color-acid);
+            color: var(--color-bg);
+            font-family: var(--font-display);
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translate(-4px, -4px); box-shadow: 4px 4px 0 var(--color-text); }
+        
+        .card {
+            border: var(--border-width) solid var(--color-text);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+        }
+        .card:hover { border-color: var(--color-acid); background: #111; }
+        
+        .meta-tag {
+            display: inline-block;
+            background: var(--color-accent);
+            color: #fff;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        /* NAV */
+        .hamburger-menu { display: block; padding: 1rem; cursor: pointer; border: var(--border-width) solid var(--color-text); }
+        .nav-links { display: none; padding: 1rem; border-bottom: var(--border-width) solid var(--color-text); }
+        .nav-links.active { display: block; }
+        .nav-links li { margin-bottom: 0.5rem; }
+        .nav-links a { font-size: 1.2rem; font-weight: bold; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--color-acid); text-decoration: underline; }
+
+        /* FOOTER */
+        footer { border-top: var(--border-width) solid var(--color-text); padding: 3rem 1rem; margin-top: 4rem; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-present" style="display:none;">
+        <div class="logo" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: bold;">
+            <span class="text-acid">CHANGWON</span> SEO
+        </div>
+        <ul class="nav-links hidden-mobile" style="display: flex; gap: 2rem; border: none; padding: 0;">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Strategy</a></li>
+            <li><a href="#" class="text-acid">Blog</a></li>
+            <li><a href="tel:010-0000-0000" class="border-acid" style="padding: 0.5rem 1rem;">CONTACT</a></li>
+        </ul>
+        <div class="hamburger-menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+            MENU
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Header Section -->
+        <section style="padding: 4rem 1rem; border-bottom: var(--border-width) solid var(--color-text);">
+            <div class="meta-tag">Latest Intel</div>
+            <h1>창원 SEO 마케팅의<br>거짓말을 폭로한다.</h1>
+            <p style="font-size: 1.5rem; max-width: 60ch;">
+                "블로그를 많이 쓰면 노출이 됩니다."<br>
+                <span class="text-accent">그건 2015 년 이야기입니다.</span><br>
+                지금 당장 당신의 비즈니스를 구할 수 있는 유일한 진실.
+            </p>
+        </section>
+
+        <!-- Article Content -->
+        <article style="padding: 3rem 1rem; max-width: 900px; margin: 0 auto;">
+            
+            <h2>01. 왜 대행사는 '콘텐츠'만 강조하는가?</h2>
+            <p>
+                대부분의 창원 지역 마케팅 대행사들은 당신에게 "일주일에 블로그 3 개씩 꾸준히 발행하세요"라고 조언합니다. 그들은 당신을 노예 부리듯 콘텐츠를 생산하게 만들지만, 정작 검색 엔진은 당신의 그 노가다성 글을 읽지도 않습니다.
+            </p>
+            <p>
+                <strong>구글은 '권위 (Authority)'를 봅니다.</strong>
+                하루에 글 100 개를 써도, 그 글을 호스팅하는 도메인의 권위가 0 점이라면 그것은 digital trash 입니다. 우리는 글쓰기를 강요하지 않습니다. 우리는 <strong>권위 있는 도메인 (PBN)</strong>에서 당신의 링크를 쏘아 올립니다. 이것이 게임의 규칙입니다.
+            </p>
+
+            <div style="margin: 3rem 0; padding: 2rem; border: var(--border-width) dashed var(--color-acid); background: rgba(204, 255, 0, 0.05);">
+                <h3 style="margin-top:0;">[핵심 전략]</h3>
+                <p style="margin-bottom:0;">
+                    일반적인 SEO 는 '신청'하는 것입니다.<br>
+                    우리 PBN 전략은 '점령'하는 것입니다.<br>
+                    이미 검색 엔진이 신뢰하는 네트워크를 장악하여, 당신의 사이트를 강제로 상위로 끌어올립니다.
+                </p>
+            </div>
+
+            <h2>02. 창원 로컬 비즈니스를 위한 공격적 백링크</h2>
+            <p>
+                경쟁사가还在 (아직도) "키워드 연구"니 "메타태그 최적화"니 하며 시간을 낭비하고 있을 때, 우리는 이미 백링크 폭격을 완료했습니다.
+            </p>
+            <ul style="list-style: square; padding-left: 1.5rem; margin-bottom: 2rem;">
+                <li style="margin-bottom: 1rem;"><strong>노출 속도:</strong> 일반 SEO 는 6 개월, 우리는 2 주.</li>
+                <li style="margin-bottom: 1rem;"><strong>유입 질:</strong> 단순 방문자가 아닌, 구매 의사가 있는 트래픽.</li>
+                <li style="margin-bottom: 1rem;"><strong>지배력:</strong> 검색 결과 1 페이지의 70% 를 우리 링크로 도배합니다.</li>
+            </ul>
+
+            <h2>03. FAQ: 당신의 의심에 대한 답변</h2>
+            
+            <div class="card">
+                <h3>Q. 구글 패널티를 먹지 않나요?</h3>
+                <p>
+                    아마추어들이 만드는 PBN 은 footprint(발자국)가 남아서 걸립니다. 우리는 군사급 은폐 기술을 사용합니다. 각 PBN 사이트는 완전히 다른 IP, 다른 호스팅, 다른 디자인을 가지고 있어 구글조차 네트워크로 인지하지 못합니다. 안전합니다.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Q. 창원 지역만 타겟팅 가능한가요?</h3>
+                <p>
+                    당연합니다. '창원', '마산', '진해' 키워드에 특화된 로컬 PBN 네트워크를 보유하고 있습니다. 전국구 경쟁이 아닌, 당신의 상권 내에서 절대적인 1 위를 만듭니다.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Q. 비용이 비싸지 않나요?</h3>
+                <p>
+                    월 50 만 원씩 1 년을 써서 효과도 못 보는 것 vs 한 번의 공격으로 3 년 치 매출을 보장받는 것. 선택은 당신의 몫입니다. 우리는 '비용'이 아닌 '투자'를 팝니다.
+                </p>
+            </div>
+
+        </article>
+
+        <!-- CTA Section -->
+        <section class="bg-acid" style="padding: 4rem 1rem; text-align: center; border-top: var(--border-width) solid var(--color-text); border-bottom: var(--border-width) solid var(--color-text);">
+            <h2 style="border: none; color: var(--color-bg); margin-bottom: 1rem;">더 이상 기다리지 마십시오.</h2>
+            <p style="margin: 0 auto 2rem auto; font-weight: bold;">
+                경쟁사가 이 글을 읽고 전략을 베끼기 전에 선점하십시오.<br>
+                무료 상담은 없습니다. 오직 실행만 있을 뿐입니다.
+            </p>
+            <a href="tel:010-0000-0000" class="btn" style="background: var(--color-bg); color: var(--color-acid); border: 2px solid var(--color-bg);">지금 바로 전화하기</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="text-acid" style="font-family: var(--font-display); font-size: 1.2rem;">CHANGWON SEO DOMINANCE</p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">
+            Copyright © 2024. All Rights Reserved.<br>
+            This site is protected by aggressive PBN strategies.<br>
+            Unauthorized copying of our methods will be prosecuted.
+        </p>
+    </footer>
+
+</body>
+</html>

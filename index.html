@@ -1,214 +1,517 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인문 철학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    
+    <!-- SEO 메타데이터 -->
+    <title>창원 SEO 마케팅 전문 | 순위 조작은 죽었다, 실전으로 승부하라</title>
+    <meta name="description" content="창원 SEO 마케팅 전문. 낡은 최적화 기법은 버려라. 검색엔진의 허점을 찌르는 공격적 백링크 전략과 PBN 구축으로 당신의 비즈니스를 검색 결과 최상단으로 폭격합니다.">
+    <meta name="keywords" content="창원 SEO 마케팅 전문, 창원 검색엔진 최적화, 창원 백링크 구축, PBN 서비스, 크롤러 유입, 구글 랭킹 상단, 창원 마케팅 대행">
+    <link rel="canonical" href="https://kr-pbn-bp-019.pages.dev/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kr-pbn-bp-019.pages.dev/">
+    <meta property="og:title" content="창원 SEO 마케팅 전문 | RULES ARE FOR BREAKING">
+    <meta property="og:description" content="가식 없는 실전 SEO. 창원 지역의 검색 지배력을 장악하는 유일한 방법.">
+    <meta property="og:image" content="https://kr-pbn-bp-019.pages.dev/og-acid.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kr-pbn-bp-019.pages.dev/">
+    <meta property="twitter:title" content="창원 SEO 마케팅 전문">
+    <meta property="twitter:description" content="검색 엔진을 해킹하는 엔지니어링 접근.">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "창원 SEO 마케팅 전문",
+      "image": "https://kr-pbn-bp-019.pages.dev/logo.png",
+      "telephone": "010-6279-0862",
+      "url": "https://kr-pbn-bp-019.pages.dev/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "창원시",
+        "addressCountry": "KR"
+      },
+      "priceRange": "$$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* RESET & BASE */
+        :root {
+            --primary: #111111;
+            --secondary: #ffff00;
+            --accent: #00ff41;
+            --white: #ffffff;
+            --font-mono: "Courier New", Courier, monospace;
+            --font-impact: "Impact", "Arial Black", sans-serif;
+            --border-w: 3px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--primary);
+            font-family: var(--font-mono);
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul { list-style: none; }
+
+        img, svg { max-width: 100%; display: block; }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-family: var(--font-impact);
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            line-height: 0.9;
+            font-weight: 900;
+        }
+
+        h1 { font-size: clamp(3rem, 10vw, 12rem); }
+        h2 { font-size: clamp(2.5rem, 8vw, 8rem); }
+        h3 { font-size: 2rem; }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* UTILITIES */
+        .bg-primary { background-color: var(--primary); color: var(--secondary); }
+        .bg-acid { background-color: var(--secondary); color: var(--primary); }
+        .text-acid { color: var(--secondary); }
+        .text-accent { color: var(--accent); }
+        .border-solid { border: var(--border-w) solid var(--primary); }
+        .border-bottom { border-bottom: var(--border-w) solid var(--primary); }
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .uppercase { text-transform: uppercase; }
+        .strike { text-decoration: line-through; }
+
+        /* HEADER & NAV */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--secondary);
+            border-bottom: var(--border-w) solid var(--primary);
+            height: 80px;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: var(--font-impact);
+            font-size: 1.5rem;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 0.2rem 0.5rem;
+            transform: rotate(-2deg);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background: 
+                linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary)),
+                linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary));
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            border-bottom: var(--border-w) solid var(--primary);
+            position: relative;
+        }
+
+        .hero-content {
+            background: var(--white);
+            border: var(--border-w) solid var(--primary);
+            padding: 2rem;
+            max-width: 90%;
+            box-shadow: 15px 15px 0px var(--primary);
+            transform: rotate(1deg);
+            z-index: 10;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--secondary);
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+            border: 2px solid var(--secondary);
+            margin-top: 2rem;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        /* MARQUEE */
+        .marquee-container {
+            background: var(--primary);
+            color: var(--accent);
+            padding: 1rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: var(--border-w) solid var(--secondary);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+            font-family: var(--font-impact);
+            font-size: 2rem;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* SECTIONS COMMON */
+        section {
+            padding: 6rem 2rem;
+            border-bottom: var(--border-w) solid var(--primary);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* SERVICES GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            border: var(--border-w) solid var(--primary);
+            padding: 2rem;
+            background: var(--white);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 10px 10px 0px var(--primary);
+            background: var(--secondary);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* UGC REVIEWS */
+        .reviews-section {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: #222;
+            border: 2px solid var(--accent);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: "VERIFIED";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: bold;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
+            transform: rotate(5deg);
+        }
+
+        .stars { color: var(--secondary); margin-bottom: 1rem; }
+        .reviewer { font-weight: bold; margin-top: 1rem; display: block; color: var(--secondary); }
+        .date { font-size: 0.8rem; opacity: 0.7; }
+
+        /* FOOTER */
+        footer {
+            background: var(--secondary);
+            padding: 4rem 2rem;
+            border-top: var(--border-w) solid var(--primary);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-cta {
+            font-size: 2rem;
+            font-family: var(--font-impact);
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--secondary);
+                flex-direction: column;
+                padding: 2rem;
+                border-bottom: var(--border-w) solid var(--primary);
+            }
+            
+            .nav-menu.active { display: flex; }
+            .hamburger { display: block; }
+            
+            h1 { font-size: 4rem; }
+            .hero { padding: 2rem 1rem; }
+            .hero-content { padding: 1rem; box-shadow: 5px 5px 0px var(--primary); }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
+    <!-- Header -->
     <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인문 철학 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
-          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
-          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
-          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
+        <div class="nav-container">
+            <a href="/" class="logo">SEO_WARFARE_</a>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="tel:01062790862" class="nav-link text-accent">010-6279-0862</a>
+            </nav>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="uppercase text-acid" style="background:var(--primary); display:inline-block; padding:0 0.5rem;">지역: 창원 | Mode: Aggressive</p>
+                <h1>창원 SEO<br><span class="text-acid" style="background:var(--primary); padding:0 0.2rem;">마케팅</span><br>전문</h1>
+                <p style="margin-top: 1.5rem; font-weight: bold; max-width: 600px;">
+                    당신의 비즈니스는invisible 상태입니다.<br>
+                    감성적인 브랜딩은 잊으세요. 알고리즘은 감정이 없습니다.<br>
+                    우리는 <strong>창원 SEO 마케팅 전문</strong> 솔루션으로 검색 엔진의 허점을 공략합니다.
+                </p>
+                <a href="tel:01062790862" class="hero-cta">지금 호출하기 >></a>
+            </div>
+            <!-- Decorative Element -->
+            <div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: var(--accent); border: var(--border-w) solid var(--primary); transform: rotate(15deg); z-index: 0;"></div>
+        </section>
+
+        <!-- Marquee -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                /// NO RANKING NO PAYMENT /// PBN NETWORK DEPLOYED /// CRAWLER TRAP DISABLED /// 창원 SEO 마케팅 전문 /// WHITE HAT IS DEAD /// LONG TAIL DOMINATION /// 
+                /// NO RANKING NO PAYMENT /// PBN NETWORK DEPLOYED /// CRAWLER TRAP DISABLED /// 창원 SEO 마케팅 전문 /// WHITE HAT IS DEAD /// LONG TAIL DOMINATION ///
+            </div>
+        </div>
+
+        <!-- About / Philosophy -->
+        <section id="about" class="bg-primary text-acid">
+            <div class="container">
+                <h2 style="border-left: 10px solid var(--secondary); padding-left: 20px;">WHY US?</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem;">
+                    <div>
+                        <h3 style="color: var(--white); margin-bottom: 1rem;">[01] 기존 대행사는 거짓말을 합니다.</h3>
+                        <p>블로그 몇 개 만들고 끝난다고요? 그건 SEO 가 아닙니다. 그것은 장난입니다. 우리는 <strong>창원 SEO 마케팅 전문</strong>으로서 데이터와 백링크의 힘으로 접근합니다. 프랜차이즈 가맹점主的인 당신의 경쟁자는 이미 우리를 쓰고 있습니다.</p>
+                    </div>
+                    <div style="border: 2px dashed var(--secondary); padding: 2rem; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center;">
+                            <span style="font-size: 4rem; font-weight: bold;">98%</span>
+                            <p>CTR 인덱싱 성공률</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services">
+            <div class="container">
+                <h2>SERVICE MODULES</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <span class="service-icon">🕸️</span>
+                        <h3>PBN 구축</h3>
+                        <p>구글이 좋아하는 고품질 도메인 네트워크를 통해 메인 사이트로 링크 주스를 폭포수처럼 흘려보냅니다. 추적 불가능한 은밀함.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon">🔍</span>
+                        <h3>롱테일 키워드 도배</h3>
+                        <p>메인 키워드만 노리지 마세요. <strong>창원 SEO 마케팅 전문</strong> 관점에서 구매 의도가 높은 구체적인 롱테일 키워드를 선점하여 전환율을 극대화합니다.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon">⚡</span>
+                        <h3>테크니컬 SEO</h3>
+                        <p>사이트 속도가 느리면 사용자는 떠납니다. 크롤러가 당신의 사이트를 읽지 못하게 하는 기술적 장벽을 모두 제거합니다.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- UGC Reviews -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2 style="color: var(--secondary);">USER LOGS</h2>
+                <p>감상적인 후기는 사절합니다. 결과만 말합니다.</p>
+                
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"타 대행사에서는 6 개월 걸린다고 하더니 여기서는 3 주 만에 인덱싱 됨. 창원 공단 쪽 공장 검색 1 페이지 진입 확인."</p>
+                        <span class="reviewer">김철수_대표</span>
+                        <span class="date">2023.10.12</span>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="stars">★★★★☆</div>
+                        <p>"디자인은 별로인데 효과는 미쳤다. 문의 전화가 하루에 20 통씩 옴. PBN 효과 확실함."</p>
+                        <span class="reviewer">이영희_사장</span>
+                        <span class="date">2023.11.05</span>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"창원 SEO 마케팅 전문이라고 해서 반신반의했는데 진짜임. 경쟁사 제치고 상단 고정."</p>
+                        <span class="reviewer">박민수_팀장</span>
+                        <span class="date">2023.12.01</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: var(--secondary); text-align: center; padding: 8rem 2rem;">
+            <h2 style="font-size: clamp(2rem, 5vw, 6rem); margin-bottom: 2rem;">READY TO<br>DOMINATE?</h2>
+            <p style="font-size: 1.5rem; margin-bottom: 2rem;">犹豫하면 경쟁사가 선점합니다.</p>
+            <a href="tel:01062790862" style="display: inline-block; background: var(--primary); color: var(--white); padding: 1.5rem 3rem; font-size: 2rem; font-weight: bold; border: 4px solid var(--white); transform: rotate(-2deg);">
+                010-6279-0862
+            </a>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <div class="footer-content">
+            <div>
+                <h3>SEO_WARFARE_</h3>
+                <p>도메인: kr-pbn-bp-019.pages.dev</p>
+                <p>Slug: kr-pbn-bp-019</p>
+                <p>Location: Changwon, South Korea</p>
+            </div>
+            <div>
+                <a href="tel:01062790862" class="footer-cta">CALL NOW</a>
+            </div>
+        </div>
+        <div style="margin-top: 4rem; border-top: 2px solid var(--primary); padding-top: 1rem; font-size: 0.8rem;">
+            &copy; 2024 창원 SEO 마케팅 전문. All rights reserved. <br>
+            This site is for demonstration purposes only. No actual services provided.
+        </div>
     </footer>
-  </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
