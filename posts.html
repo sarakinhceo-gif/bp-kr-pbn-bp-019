@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · kr-pbn-bp-019</title>
+  <meta name="description" content="kr-pbn-bp-019에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://changwon-web-marketing.pbn-builder.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* CSS 핵심: RESET & BASE */
+ :root {
+ --color-bg: #0a0a0a;
+ --color-text: #e0e0e0;
+ --color-acid: #ccff00;
+ --color-accent: #ff003c;
+ --font-main: 'Courier New', Courier, monospace;
+ --font-head: 'Arial Black', 'Helvetica Neue', sans-serif;
+ --spacing-unit: 1rem;
+ --border-width: 3px;
+ }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ body {
+ background-color: var(--color-bg);
+ color: var(--color-text);
+ font-family: var(--font-main);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+ a { text-decoration: none; color: inherit; transition: 0.2s; }
+ a:hover { background-color: var(--color-acid); color: var(--color-bg); }
+ ul { list-style: none; }
+ img, svg { max-width: 100%; display: block; }
+ 
+ /* TYPOGRAPHY */
+ h1, h2, h3, h4 { font-family: var(--font-head); text-transform: uppercase; letter-spacing: -0.05em; line-height: 1.1; }
+ h1 { font-size: clamp(2.5rem, 8vw, 6rem); color: var(--color-acid); margin-bottom: 2rem; border-bottom: var(--border-width) solid var(--color-acid); padding-bottom: 1rem; }
+ h2 { font-size: clamp(1.8rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+ h3 { font-size: 1.5rem; color: var(--color-accent); margin-bottom: 1rem; }
+ p { font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 70ch; }
+ 
+ /* UTILITIES */
+ .bg-primary { background-color: var(--color-bg); }
+ .bg-acid { background-color: var(--color-acid); color: var(--color-bg); }
+ .text-acid { color: var(--color-acid); }
+ .text-accent { color: var(--color-accent); }
+ .border-solid { border: var(--border-width) solid var(--color-text); }
+ .border-acid { border: var(--border-width) solid var(--color-acid); }
+ .container { max-width: 1400px; margin: 0 auto; padding: 0 var(--spacing-unit); }
+ .section-padding { padding: 4rem 0; }
+ .grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+ .btn { display: inline-block; padding: 1rem 2rem; font-weight: bold; text-transform: uppercase; border: var(--border-width) solid currentColor; background: transparent; cursor: pointer; }
+ .btn:hover { background: var(--color-acid); color: var(--color-bg); border-color: var(--color-acid); }
+ 
+ /* COMPONENTS */
+ header { border-bottom: var(--border-width) solid var(--color-text); padding: 1rem 0; position: sticky; top: 0; background: var(--color-bg); z-index: 100; }
+ .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+ .logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 900; color: var(--color-acid); }
+ nav ul { display: flex; gap: 2rem; }
+ nav a { font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+ 
+ .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+ .hamburger span { width: 30px; height: 4px; background-color: var(--color-acid); }
+ 
+ .marquee-container { overflow: hidden; white-space: nowrap; background: var(--color-acid); color: var(--color-bg); padding: 0.5rem 0; font-weight: bold; text-transform: uppercase; border-bottom: var(--border-width) solid var(--color-text); }
+ .marquee-content { display: inline-block; animation: scroll 20s linear infinite; }
+ @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+ 
+ .info-card { border: var(--border-width) solid var(--color-text); padding: 2rem; transition: 0.3s; }
+ .info-card:hover { transform: translate(-5px, -5px); box-shadow: 5px 5px 0px var(--color-acid); border-color: var(--color-acid); }
+ 
+ .faq-item { border-bottom: 1px solid var(--color-text); padding: 1.5rem 0; }
+ .faq-question { font-weight: bold; font-size: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; }
+ .faq-answer { margin-top: 1rem; display: none; color: var(--color-accent); }
+ .faq-item.active .faq-answer { display: block; }
+ 
+ footer { border-top: var(--border-width) solid var(--color-text); padding: 4rem 0; margin-top: 4rem; background: #111; }
+ .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+ 
+ /* RESPONSIVE */
+ @media (min-width: 768px) {
+ .grid-2 { grid-template-columns: 1fr 1fr; }
+ .hamburger { display: none; }
+ nav ul { display: flex; }
+ }
+ @media (max-width: 767px) {
+ nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-bg); border-bottom: var(--border-width) solid var(--color-acid); padding: 1rem; }
+ nav ul.show { display: flex; }
+ .hamburger { display: flex; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · kr-pbn-bp-019">
+  <meta property="og:description" content="kr-pbn-bp-019에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://changwon-web-marketing.pbn-builder.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container nav-wrapper">
+ <a href="/" class="logo">SEO_WARFARE_CHANGWON</a>
+ <div class="hamburger" onclick="toggleMenu()">
+ 
+ </div>
+ <nav>
+ <ul id="nav-menu">
+ <li><a href="/">Home</a></li>
+ <li><a href="/strategy.html">전략 (PBN)</a></li>
+ <li><a href="/info.html" class="text-acid">정보 (Info)</a></li>
+ <li><a href="/case.html">사례 (Case)</a></li>
+ 
+ </ul>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 31개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1138.html">창원 SEO 마케팅 전문 흐름과 마포 럭셔리 단체 가라오케 예약 가이드 연결 메모</a>
+        <p class="post-item__summary">창원의 창원 SEO 마케팅 전문 정보는 단순 목록보다 맥락이 중요합니다. 어떤 상황에서 필요한 정보인지 먼저 정하면 검색 결과를 훨씬 덜 흔들리게 읽을 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0061.html">창원 SEO 마케팅 전문 업체가 분석하는 동대문 풋쌤 방문 절차와 신뢰도 판별법</a>
+        <p class="post-item__summary">온라인 검색 환경에서 신뢰할 수 있는 정보를 찾는 일은 창원 SEO 마케팅 전문 솔루션을 검토하는 과정과 닮아 있습니다. 특히 마사지 샵을 선택할 때는 무분별한 광고보다는 실제 운영 정보가 투명하게</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0062.html">창원 SEO 마케팅 전문 관점의 마포 합정 소셜 라운지 공간 선택과 가격 기준</a>
+        <p class="post-item__summary">디지털 전략을 수립할 때 창원 SEO 마케팅 전문 기술이 데이터를 선별하듯, 오프라인 모임 장소를 고를 때도 명확한 기준이 필요합니다. 최근 마포와 합정 일대에는 소규모 모임을 위한 인디 소셜 라운</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0063.html">창원 SEO 마케팅 전문 노하우로 풀어본 1급수 백링크 콘텐츠 전략과 예약 절차</a>
+        <p class="post-item__summary">웹 생태계의 성장을 돕는 창원 SEO 마케팅 전문 기술은 근본적으로 콘텐츠의 질을 높이는 데 초점을 둡니다. 하지만 많은 이들이 백링크 전략을 세울 때 가장 먼저 실패하는 지점은 콘텐츠의 본질보다는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0064.html">창원 SEO 마케팅 전문 가이드가 알려주는 무인 마케팅 코딩 스쿨 접근성 분석</a>
+        <p class="post-item__summary">성공적인 자동화 비즈니스를 구축하려는 사람들에게 창원 SEO 마케팅 전문 기술은 필수적인 학습 과정이 되었습니다. 특히 최신 트렌드인 무인 운영 시스템을 배우기 위해서는 기술적 기반과 함께 교육 기</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0065.html">창원 SEO 마케팅 전문 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드 분석</a>
+        <p class="post-item__summary">어느 날 갑자기 운영 중인 웹사이트의 노출 순위가 급락하여 당황하는 사례가 많습니다. 이는 마치 소중한 머리카락이 빠지는 것처럼 사이트의 권위가 떨어지는 현상으로, 전문가들은 이를 도메인 지수 탈모</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0066.html">창원 SEO 마케팅 전문 구글 알고리즘 감점 치료 및 백링크 수술실 활용법</a>
+        <p class="post-item__summary">검색 엔진 최적화와 관련해 흔히 하는 오해 중 하나는 무작위로 많은 링크를 걸면 지수가 상승할 것이라는 믿음입니다. 사실 알고리즘은 부자연스러운 패턴을 즉각적으로 감지하여 감점을 부여합니다. 창원 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0067.html">창원 SEO 마케팅 전문 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호 전략</a>
+        <p class="post-item__summary">성공적인 검색 결과 노출을 위해서는 사이트가 검색 엔진의 요구 조건을 얼마나 충족하는지가 중요합니다. 사이트 속도, 모바일 호환성, 구조화된 데이터 배치는 기본적인 충족 조건입니다. 창원 SEO 마</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0068.html">창원 SEO 마케팅 전문 마포 코인노래방 방음 시설 비교 가이드 활용</a>
+        <p class="post-item__summary">여러분은 소음이 차단되지 않는 공간에서 온전한 휴식을 취할 수 있다고 생각하시나요? 특히 마포 지역의 코인노래방을 이용할 때 방음 문제는 고객 만족도를 결정짓는 가장 중요한 요소입니다. 창원 SEO</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0069.html">창원 SEO 마케팅 전문 업체가 분석한 소비자 보호 저널: 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">온라인 홍보 분석 역량은 비단 특정 지역에 국한되지 않으며, 창원 SEO 마케팅 전문 분석가의 시각으로 업계의 투명성을 고찰해 볼 수 있습니다. 소비자들은 무분별한 정보 속에서 올바른 선택을 하기 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0070.html">창원 SEO 마케팅 전문 업체가 비교하는 가격 판단 기준: 셔츠룸 예약 vs 셔츠룸</a>
+        <p class="post-item__summary">창원 SEO 마케팅 전문 분석 기술을 접목하여 서비스 시장을 바라보면, 소비자가 직면한 선택지 사이에서 가격 책정의 논리를 파악할 수 있습니다. 단순히 업체명을 검색하는 것과 실질적인 예약 절차를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0071.html">창원 SEO 마케팅 전문 전략이 말하는 구글 틈새 키워드 트래픽 외환 거래 전략</a>
+        <p class="post-item__summary">디지털 공간에서 수익을 창출하려는 시도는 많으나, 창원 SEO 마케팅 전문 지식을 활용하지 못하면 대부분의 전략은 실패로 돌아갑니다. 특히 트래픽 차익을 노리는 투자 영역에서 가장 흔하게 발생하는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0072.html">창원 SEO 마케팅 전문 업체가 정리한 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">비즈니스 회식 매칭을 위해 적절한 장소를 찾는 일은 생각보다 많은 에너지가 소비되는 과정입니다. 창원 SEO 마케팅 전문 지식을 지역 정보에 대입해 보면, 소비자가 가장 궁금해하는 것은 역시 가격의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0073.html">창원 SEO 마케팅 전문 업체와 함께하는 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드 전략</a>
+        <p class="post-item__summary">특정 유흥 서비스에 대한 정보를 검색하던 사용자가 신뢰할 수 없는 커뮤니티 게시글로 인해 낭패를 보는 사례가 빈번합니다. 실제로 잘못된 정보를 바탕으로 방문했다가 기대와 다른 환경을 마주하면 서비스</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0074.html">창원 SEO 마케팅 전문 기술을 활용한 구글 신뢰 지수 모발이식 솔루션 도메인 강화</a>
+        <p class="post-item__summary">많은 이들이 단기간에 검색 결과 상단에 도달하겠다는 조급함으로 인해 잘못된 백링크 전략을 세우는 경우가 많습니다. 검색 결과는 단순히 키워드 반복만으로 결정되지 않으며, 도메인 파워를 증폭시키기 위</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0075.html">창원 SEO 마케팅 전문 팀이 제안하는 구글 인덱싱 속도 초고속 광회선 대역폭 최적화</a>
+        <p class="post-item__summary">검색 결과에 웹페이지를 빠르게 반영하기 위해서는 서버의 대역폭과 응답 속도가 최상의 상태를 유지해야 합니다. 많은 운영자가 콘텐츠 작성에만 몰두하지만, 기술적인 인프라가 뒷받침되지 않으면 인덱싱 속</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0078.html">창원 SEO 마케팅 전문 업체와 함께하는 연남 클럽 추천정보 비교법</a>
+        <p class="post-item__summary">창원 SEO 마케팅 전문 전략을 수립할 때 타겟의 니즈를 파악하는 것이 중요하듯, 연남 지역의 클럽을 선택할 때도 나만의 기준을 세우는 것이 핵심입니다. 우선 분위기를 중시하는 대형 매장과 프라이빗</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0079.html">창원 SEO 마케팅 전문 노하우로 살펴보는 합정 셔츠룸 추천정보 실패 예방</a>
+        <p class="post-item__summary">창원 SEO 마케팅 전문 관점에서 비즈니스의 성패를 나누는 결정적인 포인트가 있듯이, 셔츠룸 이용에도 반드시 피해야 할 실패 지점들이 존재합니다. 많은 이들이 가장 먼저 저지르는 실수는 충분한 정보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0080.html">창원 SEO 마케팅 전문 전략으로 분석한 공덕 가라오케 추천정보 체크리스트</a>
+        <p class="post-item__summary">창원 SEO 마케팅 전문적인 접근 방식은 복잡한 환경 속에서 최적의 결과를 도출하는 데 있습니다. 이와 마찬가지로 공덕 지역에서 최적의 가라오케를 찾기 위해서는 위치와 접근성이라는 두 가지 핵심 항</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0081.html">창원 SEO 마케팅 전문 업체가 알려주는 상수 마사지 추천정보 활용법</a>
+        <p class="post-item__summary">평소와 다르게 업무 강도가 높아져 몸의 피로가 극에 달했을 때 누구나 휴식을 갈구하게 됩니다. 창원 SEO 마케팅 전문 전략을 연구하며 디지털 공간의 흐름을 읽는 필자 또한 일상 속에서 적절한 재충</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

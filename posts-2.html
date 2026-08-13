@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · kr-pbn-bp-019</title>
+  <meta name="description" content="kr-pbn-bp-019에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://changwon-web-marketing.pbn-builder.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* CSS 핵심: RESET & BASE */
+ :root {
+ --color-bg: #0a0a0a;
+ --color-text: #e0e0e0;
+ --color-acid: #ccff00;
+ --color-accent: #ff003c;
+ --font-main: 'Courier New', Courier, monospace;
+ --font-head: 'Arial Black', 'Helvetica Neue', sans-serif;
+ --spacing-unit: 1rem;
+ --border-width: 3px;
+ }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ body {
+ background-color: var(--color-bg);
+ color: var(--color-text);
+ font-family: var(--font-main);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+ a { text-decoration: none; color: inherit; transition: 0.2s; }
+ a:hover { background-color: var(--color-acid); color: var(--color-bg); }
+ ul { list-style: none; }
+ img, svg { max-width: 100%; display: block; }
+ 
+ /* TYPOGRAPHY */
+ h1, h2, h3, h4 { font-family: var(--font-head); text-transform: uppercase; letter-spacing: -0.05em; line-height: 1.1; }
+ h1 { font-size: clamp(2.5rem, 8vw, 6rem); color: var(--color-acid); margin-bottom: 2rem; border-bottom: var(--border-width) solid var(--color-acid); padding-bottom: 1rem; }
+ h2 { font-size: clamp(1.8rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+ h3 { font-size: 1.5rem; color: var(--color-accent); margin-bottom: 1rem; }
+ p { font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 70ch; }
+ 
+ /* UTILITIES */
+ .bg-primary { background-color: var(--color-bg); }
+ .bg-acid { background-color: var(--color-acid); color: var(--color-bg); }
+ .text-acid { color: var(--color-acid); }
+ .text-accent { color: var(--color-accent); }
+ .border-solid { border: var(--border-width) solid var(--color-text); }
+ .border-acid { border: var(--border-width) solid var(--color-acid); }
+ .container { max-width: 1400px; margin: 0 auto; padding: 0 var(--spacing-unit); }
+ .section-padding { padding: 4rem 0; }
+ .grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+ .btn { display: inline-block; padding: 1rem 2rem; font-weight: bold; text-transform: uppercase; border: var(--border-width) solid currentColor; background: transparent; cursor: pointer; }
+ .btn:hover { background: var(--color-acid); color: var(--color-bg); border-color: var(--color-acid); }
+ 
+ /* COMPONENTS */
+ header { border-bottom: var(--border-width) solid var(--color-text); padding: 1rem 0; position: sticky; top: 0; background: var(--color-bg); z-index: 100; }
+ .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+ .logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 900; color: var(--color-acid); }
+ nav ul { display: flex; gap: 2rem; }
+ nav a { font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+ 
+ .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+ .hamburger span { width: 30px; height: 4px; background-color: var(--color-acid); }
+ 
+ .marquee-container { overflow: hidden; white-space: nowrap; background: var(--color-acid); color: var(--color-bg); padding: 0.5rem 0; font-weight: bold; text-transform: uppercase; border-bottom: var(--border-width) solid var(--color-text); }
+ .marquee-content { display: inline-block; animation: scroll 20s linear infinite; }
+ @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+ 
+ .info-card { border: var(--border-width) solid var(--color-text); padding: 2rem; transition: 0.3s; }
+ .info-card:hover { transform: translate(-5px, -5px); box-shadow: 5px 5px 0px var(--color-acid); border-color: var(--color-acid); }
+ 
+ .faq-item { border-bottom: 1px solid var(--color-text); padding: 1.5rem 0; }
+ .faq-question { font-weight: bold; font-size: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; }
+ .faq-answer { margin-top: 1rem; display: none; color: var(--color-accent); }
+ .faq-item.active .faq-answer { display: block; }
+ 
+ footer { border-top: var(--border-width) solid var(--color-text); padding: 4rem 0; margin-top: 4rem; background: #111; }
+ .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+ 
+ /* RESPONSIVE */
+ @media (min-width: 768px) {
+ .grid-2 { grid-template-columns: 1fr 1fr; }
+ .hamburger { display: none; }
+ nav ul { display: flex; }
+ }
+ @media (max-width: 767px) {
+ nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-bg); border-bottom: var(--border-width) solid var(--color-acid); padding: 1rem; }
+ nav ul.show { display: flex; }
+ .hamburger { display: flex; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · kr-pbn-bp-019">
+  <meta property="og:description" content="kr-pbn-bp-019에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://changwon-web-marketing.pbn-builder.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container nav-wrapper">
+ <a href="/" class="logo">SEO_WARFARE_CHANGWON</a>
+ <div class="hamburger" onclick="toggleMenu()">
+ 
+ </div>
+ <nav>
+ <ul id="nav-menu">
+ <li><a href="/">Home</a></li>
+ <li><a href="/strategy.html">전략 (PBN)</a></li>
+ <li><a href="/info.html" class="text-acid">정보 (Info)</a></li>
+ <li><a href="/case.html">사례 (Case)</a></li>
+ 
+ </ul>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 31개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0082.html">창원 SEO 마케팅 전문 분석가의 시선으로 본 망원 노래방 추천정보</a>
+        <p class="post-item__summary">흔히 노래방은 단순히 노래를 부르는 공간이라는 단편적인 오해를 받곤 하지만, 실제로는 스트레스 해소와 친목 도모를 위한 복합적인 문화 공간입니다. 창원 SEO 마케팅 전문 활동을 통해 매일 방대한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0083.html">창원 SEO 마케팅 전문 에이전시의 제언 홍대 노래방 추천정보 분석</a>
+        <p class="post-item__summary">쾌적한 음향 시설, 넓은 공간, 그리고 친절한 서비스라는 충족 조건을 만족하는 업체를 찾는 일은 홍대라는 번화가에서 더욱 어렵게 느껴집니다. 창원 SEO 마케팅 전문 팀에서 분석 업무를 수행하며 체</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0084.html">창원 SEO 마케팅 전문 관점에서 본 공덕 셔츠룸 추천정보 선택 가이드</a>
+        <p class="post-item__summary">여러분은 낯선 지역에서 유흥 시설을 선택할 때 무엇을 가장 우선순위에 두십니까? 창원 SEO 마케팅 전문 작가로서 수많은 업체의 데이터를 분석하다 보면, 소비자가 기준을 세우지 못해 혼란스러워하는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0085.html">창원 SEO 마케팅 전문 업체가 알려주는 연남 유흥 추천정보 판별 기준</a>
+        <p class="post-item__summary">온라인상에서 범람하는 정보를 효율적으로 관리하는 것은 마치 창원 SEO 마케팅 전문 기술을 활용하여 검색 상단에 노출하는 과정과 유사합니다. 유용한 정보를 찾기 위해서는 우선 해당 데이터의 출처가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0086.html">창원 SEO 마케팅 전문 지식을 응용하는 마곡 가라오케 추천정보 비교</a>
+        <p class="post-item__summary">비즈니스 목적이나 개인적인 모임을 위해 장소를 선정할 때 창원 SEO 마케팅 전문 분석 기법처럼 세밀한 비교가 필요합니다. 많은 이용자가 가라오케를 선택할 때 저렴한 가격과 높은 품질이라는 두 가지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0087.html">창원 SEO 마케팅 전문 역량으로 알아보는 마곡 유흥 추천정보 예약법</a>
+        <p class="post-item__summary">효율적인 예약을 진행하는 과정은 창원 SEO 마케팅 전문 전략을 수립하는 것만큼이나 체계적인 절차가 요구됩니다. 많은 사람이 예약을 시도하다가 실패하는 지점은 대부분 정보가 확인되지 않은 상태에서 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0088.html">창원 SEO 마케팅 전문 기술로 확인하는 합정 노래방 추천정보 가이드</a>
+        <p class="post-item__summary">지역 정보를 다루는 것은 창원 SEO 마케팅 전문 분석 업무처럼 정확한 데이터를 확보하는 것이 핵심입니다. 특히 노래방과 같이 접근성이 중요한 장소를 찾을 때는 위치와 교통 편의성을 꼼꼼히 체크해야</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0208.html">창원 SEO 마케팅 전문과 구글 알고리즘 고신용 도메인 보증 카드 발급 절차</a>
+        <p class="post-item__summary">디지털 자산의 가치를 높이기 위해 창원 SEO 마케팅 전문 기술을 활용하는 사례가 늘고 있습니다. 특히 웹사이트의 신뢰도를 결정짓는 알고리즘 평가에서 고신용 도메인을 확보하는 것은 매우 중요합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0209.html">창원 SEO 마케팅 전문 기술로 분석한 합정 셔츠룸 단골들이 뽑은 핫플 매거진 탐방기</a>
+        <p class="post-item__summary">퇴근길 합정역 인근 골목에서 우연히 발견한 간판 하나가 발걸음을 멈추게 만들었습니다. 처음 방문하는 이들은 화려한 외관에 현혹되기 쉽지만, 정작 실속 있는 정보는 내부 커뮤니티에서 시작되는 경우가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0210.html">창원 SEO 마케팅 전문 노하우로 살펴보는 셔츠룸 사이트 효율적 이용법</a>
+        <p class="post-item__summary">많은 이들이 온라인상의 정보는 모두 정확하다고 오해하며 셔츠룸 서비스를 검색합니다. 하지만 모든 정보가 신뢰할 수 있는 것은 아니며, 잘못된 경로를 통한 접근은 불필요한 비용과 시간 낭비를 초래합니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0211.html">창원 SEO 마케팅 전문 분석력을 통한 마포 유흥 투명 정찰제 가격 정보 디렉토리 활용</a>
+        <p class="post-item__summary">쾌적한 유흥 문화를 위해서는 합리적인 가격 정책과 명확한 정보 공개가 가장 먼저 충족되어야 합니다. 서비스 이용 전 인원 구성에 따른 가격 체계를 정확히 이해하는 것은 불필요한 오해를 줄이는 첫걸음</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
